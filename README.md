@@ -28,7 +28,7 @@ If perceptual similarity matches human judgment better, embeddings might carry m
 
 ## 📦 Data
 - **Visuelle2** (fashion): images + metadata (e.g., release date, store) + sales series.  
-  - Access: `<link or note about access>`.  
+  - Access: `[<link or note about access>](https://humaticslab.github.io/forecasting/visuelle)`.  
   - Preprocessing: image normalization, SKU filtering, time series alignment, train/val/test splits by calendar blocks.  
 - **Triplet sources**  
   - **NIGHTS** (human similarity judgments).  
