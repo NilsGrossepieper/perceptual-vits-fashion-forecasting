@@ -8,7 +8,7 @@
 
 ## 📌 Project Status
 **In progress** (MSc Thesis, Eberhard Karls Universität Tübingen).  
-Planned submission: `<Month YYYY>`.
+Planned submission: `<Month October/November>`.
 
 ---
 
