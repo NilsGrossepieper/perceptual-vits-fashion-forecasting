@@ -19,7 +19,7 @@ If perceptual similarity matches human judgment better, embeddings might carry m
 ---
 
 ## 🧩 Research Questions
-1. Do **human-aligned** embeddings (NIGHTS → DreamSim-style) improve SKU-level sales forecasts vs. **vanilla** models?  
+1. Do **human-aligned** embeddings (NIGHTS → DreamSim-style) improve image embedding-level sales forecasts vs. **vanilla** models?  
 2. Does **domain-specific human alignment** (fashion triplets) outperform generic human alignment?  
 3. Are **label-derived** triplets (no human judgment) a competitive proxy?  
 4. How do **fine-tuning strategies** (LoRA vs. standard full fine-tuning) affect results?
@@ -28,7 +28,7 @@ If perceptual similarity matches human judgment better, embeddings might carry m
 
 ## 📦 Data
 - **Visuelle2** (fashion): images + metadata (e.g., release date, store) + sales series.  
-  - Access: `[<link or note about access>](https://humaticslab.github.io/forecasting/visuelle)`.  
+  - Access: [Visuelle2 dataset overview](https://humaticslab.github.io/forecasting/visuelle)
   - Preprocessing: image normalization, SKU filtering, time series alignment, train/val/test splits by calendar blocks.  
 - **Triplet sources**  
   - **NIGHTS** (human similarity judgments).  
@@ -55,15 +55,11 @@ If perceptual similarity matches human judgment better, embeddings might carry m
 - **Full/standard fine-tuning** (MLE-style objectives)
 
 ### Forecasting models (consume embeddings)
-- Classical + ML: `<XGBoost / LightGBM / RandomForest>`  
-- Deep/time-series: `<TFT / TCN / simple LSTM / Prophet as baseline>`  
-- Hierarchy or group handling: `<by store / item / category>` (if applicable)
-
+- kNN 
+- Ridge Regression
+- Random Forest
+- Gradient Boosting
 ### Evaluation
-- Metrics: **MAPE, WAPE, MAE, SMAPE** (+ **CRPS** if probabilistic)  
-- Robustness: rolling-origin splits; new-item (cold-start) slices; category/store segmentation  
-- Statistical tests: `<Diebold–Mariano / permutation tests>` where relevant
-
----
-
-## 🗂️ Repository Structure
+- Metrics: **MAPE, WAPE, MAE** 
+- Robustness: time based split for the last two fashion seasons (SS and AW) 
+- Statistical tests: Work in  progress
