@@ -62,4 +62,4 @@ If perceptual similarity matches human judgment better, embeddings might carry m
 ### Evaluation
 - Metrics: **MAPE, WAPE, MAE** 
 - Robustness: time based split for the last two fashion seasons (SS and AW) 
-- Statistical tests: Work in  progress
+- Statistical tests: Work in  progress...
